@@ -30,4 +30,13 @@
 &nbsp;
 * Add the `{{{body}}}` code snippet inside the body tag in *main.handlebars* so that the loaded views will be able to be outputted from the main.
 * Add the *views/about.handlebars* view.
-* Now the views can be rendered and data can be passed to them from the route definitions in *app.js*. 
+* Now the views can be rendered and data can be passed to them from the route definitions in *app.js*.
+
+
+&nbsp;
+### 03 Add a Bootstrap navbar
+
+* Add the CDN content for Bootstrap CSS and JS in the main layout.
+* Copy the collapsible navbar code from Bootstrap docs to the main layout body, above the views content.
+* Add a *container* div and apply some styling changes to the navbar.
+* Keep the required list items and edit the links in order to point to the app routes.
