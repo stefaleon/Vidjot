@@ -40,3 +40,11 @@
 * Copy the collapsible navbar code from Bootstrap docs to the main layout body, above the views content.
 * Add a *container* div and apply some styling changes to the navbar.
 * Keep the required list items and edit the links in order to point to the app routes.
+
+
+&nbsp;
+### 04 Use partials
+
+* Add the *views/partials* folder and the <i>`_navbar.handlebars`</i> file.
+* Clean up the main view by moving the navbar code to the partial view.
+* Edit and style the index view.
