@@ -5,6 +5,7 @@
 ### Dependencies
 * Express
 * express-handlebars
+* mongoose
 
 
 
@@ -48,3 +49,10 @@
 * Add the *views/partials* folder and the <i>`_navbar.handlebars`</i> file.
 * Clean up the main view by moving the navbar code to the partial view.
 * Edit and style the index view.
+
+
+&nbsp;
+### 05 Add mongoose
+
+* Install mongoose (`npm i -s mongoose`).
+* Use it in *app.js* in order to create a connection to a local database.
