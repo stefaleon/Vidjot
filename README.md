@@ -71,3 +71,13 @@
 * Add the *Video-Ideas* dropdown in the nav partial.
 * Add the *views/ideas* folder and the *add.handlebars* view which contains a form for adding ideas.
 * In *app.js*, add the GET route for */ideas/add'* which will be rendering the *ideas/add* view.
+
+
+&nbsp;
+### 08 Server-side form validation
+
+* Require and use the body-parser middleware.
+* In *app.js*, add the */ideas* POST route.
+* Add server-side validation for setting both form fields to required, by use of conditionals and an array arbitrarily named *errors*.
+* Use a handlebars loop to display the server-side error messages in the form.
+* Client-side validation may also be added by using the *required* keyword in the inputs.
