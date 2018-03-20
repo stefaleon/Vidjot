@@ -56,3 +56,10 @@
 
 * Install mongoose (`npm i -s mongoose`).
 * Use it in *app.js* in order to create a connection to a local database.
+
+
+&nbsp;
+### 06 Create a model
+
+* Add the *models* folder and the *Idea.js* model.
+* Load the model in *app.js*.
