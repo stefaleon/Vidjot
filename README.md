@@ -63,3 +63,11 @@
 
 * Add the *models* folder and the *Idea.js* model.
 * Load the model in *app.js*.
+
+
+&nbsp;
+### 07 Add a form
+
+* Add the *Video-Ideas* dropdown in the nav partial.
+* Add the *views/ideas* folder and the *add.handlebars* view which contains a form for adding ideas.
+* In *app.js*, add the GET route for */ideas/add'* which will be rendering the *ideas/add* view.
