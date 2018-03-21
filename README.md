@@ -88,3 +88,11 @@
 
 * On successful form submission, save the data to a new instance of the used data model (Idea).
 * Then display the returned object from the promise (temporarily, will eventually redirect to the */ideas* route).
+
+
+&nbsp;
+### 10 Fetch Ideas from MongoDB
+
+* Create the */ideas* GET route. Call *find()* on the Idea model, sort the result by date in descending order and render the result to the *ideas/index* view.
+* In the *views/ideas* folder add the *index.handlebars* view. Display all the ideas with a handlebars loop.
+* Edit the form POST route in order to eventually redirect to the */ideas* GET route on successful submission.

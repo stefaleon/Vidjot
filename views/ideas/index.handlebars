@@ -1,0 +1,11 @@
+{{#each ideas}}
+<!-- if there are ideas -->
+  <div class="card card-body m-2">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+    <p class="blockquote-footer">Added on {{date}}
+  </div>
+{{else}}
+<!-- else display message -->
+  <h3>No ideas listed.</h3>
+{{/each}}
