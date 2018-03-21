@@ -81,3 +81,10 @@
 * Add server-side validation for setting both form fields to required, by use of conditionals and an array arbitrarily named *errors*.
 * Use a handlebars loop to display the server-side error messages in the form.
 * Client-side validation may also be added by using the *required* keyword in the inputs.
+
+
+&nbsp;
+### 09 Save an Idea to MongoDB
+
+* On successful form submission, save the data to a new instance of the used data model (Idea).
+* Then display the returned object from the promise (temporarily, will eventually redirect to the */ideas* route).

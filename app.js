@@ -58,7 +58,12 @@ app.post('/ideas', (req, res) => {
     });
   } else {
     console.log(req.body);
-    res.send('posting ideas!');
+    var newItem = {
+      title: req.body.title,
+      details: req.body.details
+    };
+    new Idea(newItem).save()
+      .then(idea => { res.send(idea); });
   }
 
 });
