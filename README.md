@@ -70,7 +70,7 @@
 
 * Add the *Video-Ideas* dropdown in the nav partial.
 * Add the *views/ideas* folder and the *add.handlebars* view which contains a form for adding ideas.
-* In *app.js*, add the GET route for */ideas/add'* which will be rendering the *ideas/add* view.
+* In *app.js*, add the GET route for */ideas/add* which will be rendering the *ideas/add* view.
 
 
 &nbsp;
@@ -96,3 +96,12 @@
 * Create the */ideas* GET route. Call *find()* on the Idea model, sort the result by date in descending order and render the result to the *ideas/index* view.
 * In the *views/ideas* folder add the *index.handlebars* view. Display all the ideas with a handlebars loop.
 * Edit the form POST route in order to eventually redirect to the */ideas* GET route on successful submission.
+
+
+&nbsp;
+### 11 Edit Ideas form and GET route
+
+* Add the GET route to the *Edit Idea* form which will be rendering the edit form. Find the one idea with the id specified in the request parameters.
+* In the *views/ideas* folder add the *edit.handlebars* view.
+* Add an edit button in the *index.handlebars* view.
+* Make the edit form as an adjusted copy of the add form.  
