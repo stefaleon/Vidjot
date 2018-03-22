@@ -6,6 +6,7 @@
 * Express
 * express-handlebars
 * mongoose
+* method-override
 
 
 
@@ -101,7 +102,14 @@
 &nbsp;
 ### 11 Edit Ideas form and GET route
 
-* Add the GET route to the *Edit Idea* form which will be rendering the edit form. Find the one idea with the id specified in the request parameters.
+* Add the */ideas/edit/:id* GET route to the *Edit Idea* form which will be rendering the edit form. Find the one idea with the id specified in the request parameters.
 * In the *views/ideas* folder add the *edit.handlebars* view.
 * Add an edit button in the *index.handlebars* view.
 * Make the edit form as an adjusted copy of the add form.  
+
+&nbsp;
+### 12 Update Ideas
+
+* Create the */ideas/:id* PUT route. Find the one idea with the id specified in the request parameters. Set the new values, save the idea and redirect to the */ideas* route.
+* The form cannot by default send a PUT request (form method can only be set to "post"), so we will install and use the *method-override* package (`$ npm i -s method-override`).
+* Configure properly the form action in the *edit.handlebars* view, defining the route to a specific id and using the query that sets the method to PUT. Include the hidden input for the `_method`.
