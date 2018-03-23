@@ -105,9 +105,16 @@ app.put('/ideas/:id', (req,res) => {
       idea.details = req.body.details
 
       idea.save()
-        .then(idea => {
+        .then(() => {
           res.redirect('/ideas');
         });
+    });
+});
+
+app.delete('/ideas/:id', (req, res) => {
+  Idea.remove({_id: req.params.id})
+    .then(() => {
+      res.redirect('/ideas');
     });
 });
 
