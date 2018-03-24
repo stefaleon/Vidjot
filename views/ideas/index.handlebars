@@ -3,8 +3,12 @@
   <div class="card card-body m-2">
     <h4>{{title}}</h4>
     <p>{{details}}</p>
-    <p class="blockquote-footer">Added on {{date}}
-    <a class="btn btn-dark btn-block mt-4" href="/ideas/edit/{{id}}">Edit</a>
+    <p class="blockquote-footer">Added on {{date}}</p>
+    <a class="btn btn-dark btn-block" href="/ideas/edit/{{id}}">Edit</a>
+    <form action="/ideas/{{id}}?_method=DELETE" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit"class="btn btn-danger btn-block mt-1" value="Delete">
+    </form>
   </div>
 {{else}}
 <!-- else display message -->
