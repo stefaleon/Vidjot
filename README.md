@@ -7,6 +7,8 @@
 * express-handlebars
 * mongoose
 * method-override
+* express-session
+* connect-flash
 
 
 
@@ -120,4 +122,15 @@
 ### 13 Delete Ideas
 
 * In the *index.handlebars* view, add a form which contains a hidden input for the `_method` and a button. The form action defines the route to a specific id using the query that sets the method to DELETE.
-* Create the */ideas/:id* DELETE route. Remove the idea with the id specified in the request parameters and redirect to the */ideas* route..
+* Create the */ideas/:id* DELETE route. Remove the idea with the id specified in the request parameters and redirect to the */ideas* route.
+
+
+&nbsp;
+### 14 Flash messages
+
+* Install and use express-session (`npm i -s express-session`).
+* Install and use connect-flash (`npm i -s connect-flash`).
+* In another *use* statement, set the messaging local variables for various messages.
+* Create the partial view *views/partials/_msg.handlebars*. The messages are conditionally displayed.
+* Inject the messages' partial view in the main layout.
+* Call *flash* in the app routes and set the appropriate message per case.
