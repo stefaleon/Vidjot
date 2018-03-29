@@ -134,3 +134,16 @@
 * Create the partial view *views/partials/_msg.handlebars*. The messages are conditionally displayed.
 * Inject the messages' partial view in the main layout.
 * Call *flash* in the app routes and set the appropriate message per case.
+
+
+
+&nbsp;
+## Authentication with Passport
+
+&nbsp;
+### 15 Use Express router to tidy up the routes
+
+* Add the *routes* folder and create *ideas.js*.
+* Move the *Ideas* routes from *app.js* to *ideas.js*. Edit the routes by replacing *app* with *router* and removing the */ideas* prefixes from the urls.
+* Require the *ideas* routes in *app.js*. Use them by linking back the */ideas* prefix to the *ideas* routes file.
+* Also move the *Idea* mongoose model definition from *app.js* to *ideas.js*.
