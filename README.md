@@ -147,3 +147,11 @@
 * Move the *Ideas* routes from *app.js* to *ideas.js*. Edit the routes by replacing *app* with *router* and removing the */ideas* prefixes from the urls.
 * Require the *ideas* routes in *app.js*. Use them by linking back the */ideas* prefix to the *ideas* routes file.
 * Also move the *Idea* mongoose model definition from *app.js* to *ideas.js*.
+
+
+&nbsp;
+### 16 Add the users routes
+
+* In the *routes* folder create *users.js*.
+* Add the preliminary *login* and *register* user routes.
+* Require and use the *users* routes in *app.js*.

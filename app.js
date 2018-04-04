@@ -11,7 +11,7 @@ const app = express();
 const port = 5000;
 
 const ideas = require('./routes/ideas');
-
+const users = require('./routes/users');
 
 mongoose.connect('mongodb://localhost/vidjot-dev')
 .then(() => console.log('MongoDB connected...'))
@@ -46,7 +46,10 @@ app.use((req, res, next) => {
   next();
 });
 
+
 app.use('/ideas', ideas);
+app.use('/users', users);
+
 
 app.get('/', (req, res) => {
   const someString = "This is a string passed to the view."
