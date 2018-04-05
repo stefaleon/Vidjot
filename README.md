@@ -9,6 +9,7 @@
 * method-override
 * express-session
 * connect-flash
+* bcryptjs
 
 
 
@@ -16,7 +17,7 @@
 ### 01 Create the Node application
 
 * Create *package.json* using `$ npm init`.
-* Install express (`npm i -s express`).
+* Install express (`$ npm i -s express`).
 * Configure *app.js*.
 * Started the app (`$ node app`).
 
@@ -169,8 +170,15 @@
 &nbsp;
 ### 18 Add the user login and register views
 
-* Create the *views\users* folder and add the *login.handlebars* and *register.handlebars* views.
+* Create the *views/users* folder and add the *login.handlebars* and *register.handlebars* views.
 * Add forms with the appropriate inputs and buttons.
 * Add the logo image on top. Add a link to the *style.css* in *main.handlebars* and style the logo class.
 * Edit the user routes in order to render the views.
 * Add links to the views in the navbar.
+
+
+&nbsp;
+### 19 Add the User model
+
+* In the models folder add *User.js*. Define the user model in it.
+* Install *bcryptjs* (`$ npm i -s bcryptjs` || `$ yarn add bcryptjs`) in order to be able to encrypt the password property.
