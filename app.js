@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const flash = require ('connect-flash');
 const session = require ('express-session');
+const path = require('path');
 
 const app = express();
 
@@ -25,6 +26,7 @@ const Idea = mongoose.model('ideas');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());

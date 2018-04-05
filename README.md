@@ -155,3 +155,12 @@
 * In the *routes* folder create *users.js*.
 * Add the preliminary *login* and *register* user routes.
 * Require and use the *users* routes in *app.js*.
+
+
+&nbsp;
+### 17 Setup for use of static files
+
+* Add the *public* folder.
+* Inside *public* create the *css* folder and add *style.css*, and the *img* folder and add a logo file.
+* Require *path*.
+* Use the *express.static* middleware and use *path.join* to pass the path to the *public* folder.
