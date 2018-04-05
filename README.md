@@ -164,3 +164,13 @@
 * Inside *public* create the *css* folder and add *style.css*, and the *img* folder and add a logo file.
 * Require *path*.
 * Use the *express.static* middleware and use *path.join* to pass the path to the *public* folder.
+
+
+&nbsp;
+### 18 Add the user login and register views
+
+* Create the *views\users* folder and add the *login.handlebars* and *register.handlebars* views.
+* Add forms with the appropriate inputs and buttons.
+* Add the logo image on top. Add a link to the *style.css* in *main.handlebars* and style the logo class.
+* Edit the user routes in order to render the views.
+* Add links to the views in the navbar.
