@@ -182,3 +182,12 @@
 
 * In the models folder add *User.js*. Define the user model in it.
 * Install *bcryptjs* (`$ npm i -s bcryptjs` || `$ yarn add bcryptjs`) in order to be able to encrypt the password property.
+
+
+&nbsp;
+### 20 Validate the register user POST route
+
+* In *routes/users.js* add the register POST route.
+* Add password validation logic.
+* Create the *_errors.handlebars* partial and move the error displaying code from *views/ideas/add.handlebars* to it. Then use it in the main layout (*views/layouts/main.handlebars*) so that it is available in all views.
+* Remove the error displaying code snippet from *views/ideas/edit.handlebars* as well, and add client side validation by making the inputs `required`.
