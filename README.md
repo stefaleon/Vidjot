@@ -215,9 +215,22 @@
 ### 22 Authentication with Passport Local
 
 * Install *Passport* and *passport-local* (`$ npm i -s passport passport-local` || `$ yarn add passport passport-local`).
-* In the users routes file (*routes/users.js*), require *bcryptjs* and *passport*.
-* Add the login POST route. Call *passport.authenticate* with the  *local* strategy. On success redirect to the *ideas* route, while on failure back to the *login* route.
+* In the users routes file (*routes/users.js*), require *passport*.
+* Add the login POST route. Call *passport.authenticate* with the *local* strategy. On success redirect to the *ideas* route, while on failure back to the *login* route.
 * Create a *config* folder and add the *passport.js* file wherein the strategy for *Passport* will be defined.
 * Require the *Strategy* module from *passport-local*, *bcryptjs* and *mongoose* and bring in the *User* model.
-* Define the local strategy in the export of teh module with a *passport.use* call. Change the defaults by use of the *usernameField* option.
+* Define the local strategy in the export of the module with a *passport.use* call. Change the defaults by use of the *usernameField* option.
 * In *app.js* require *passport* and pass it as a parameter to the configuration that we require as well.
+
+
+&nbsp;
+### 23 Login
+
+* Edit the *_errors.handlebars* partial in order to cover the single error case.
+* Search for the email in the database. If not found return *done* with relative message.
+* If the email matches one in the database, compare the password.
+
+*In a typical web application, the credentials used to authenticate a user will only be transmitted during the login request. If authentication succeeds, a session will be established and maintained via a cookie set in the user's browser. Each subsequent request will not contain credentials, but rather the unique cookie that identifies the session. In order to support login sessions, Passport will serialize and deserialize user instances to and from the session.*
+* Add the *serialize - deserialize* code for the user in the export of the *passport config* module.
+
+* In *app.js*, add the *Passport* related middleware (*passport.initialize* and *passport.session*). Make sure it is put after the *express-session* middleware statement.
