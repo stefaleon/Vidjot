@@ -191,3 +191,19 @@
 * Add password validation logic.
 * Create the *_errors.handlebars* partial and move the error displaying code from *views/ideas/add.handlebars* to it. Then use it in the main layout (*views/layouts/main.handlebars*) so that it is available in all views.
 * Remove the error displaying code snippet from *views/ideas/edit.handlebars* as well, and add client side validation by making the inputs `required`.
+
+
+
+&nbsp;
+### 21 Register users
+
+* In *routes/users.js*, require *bcryptjs*.
+
+* Also require the *User* model and load it to the *User* variable.
+
+* Edit the register POST route in order to add the user to the database when the form is submitted without errors.
+
+  * First check in the database if the email has already been registered.
+  * Use the *bcryptjs* *genSalt* and *hash* methods in order to encrypt the password field.
+  * Finally use the *mongoose* *save* method and register the user.
+  * Display appropriate messages per case.
