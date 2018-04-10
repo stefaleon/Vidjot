@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const flash = require ('connect-flash');
 const session = require ('express-session');
 const path = require('path');
+const passport = require('passport');
 
 const app = express();
 
@@ -13,6 +14,9 @@ const port = 5000;
 
 const ideas = require('./routes/ideas');
 const users = require('./routes/users');
+
+
+require('./config/passport')(passport);
 
 mongoose.connect('mongodb://localhost/vidjot-dev')
 .then(() => console.log('MongoDB connected...'))

@@ -10,7 +10,8 @@
 * express-session
 * connect-flash
 * bcryptjs
-
+* Passport
+* passport-local
 
 
 &nbsp;
@@ -207,3 +208,16 @@
   * Use the *bcryptjs* *genSalt* and *hash* methods in order to encrypt the password field.
   * Finally use the *mongoose* *save* method and register the user.
   * Display appropriate messages per case.
+
+
+
+&nbsp;
+### 22 Authentication with Passport Local
+
+* Install *Passport* and *passport-local* (`$ npm i -s passport passport-local` || `$ yarn add passport passport-local`).
+* In the users routes file (*routes/users.js*), require *bcryptjs* and *passport*.
+* Add the login POST route. Call *passport.authenticate* with the  *local* strategy. On success redirect to the *ideas* route, while on failure back to the *login* route.
+* Create a *config* folder and add the *passport.js* file wherein the strategy for *Passport* will be defined.
+* Require the *Strategy* module from *passport-local*, *bcryptjs* and *mongoose* and bring in the *User* model.
+* Define the local strategy in the export of teh module with a *passport.use* call. Change the defaults by use of the *usernameField* option.
+* In *app.js* require *passport* and pass it as a parameter to the configuration that we require as well.
